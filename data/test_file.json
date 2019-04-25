@@ -1,0 +1,23 @@
+[
+  {
+    "id": 122,
+    "name": "122 - LOWER RIVER TCE / ELLIS ST",
+    "address": "Lower River Tce / Ellis St",
+    "latitude": -27.482279,
+    "longitude": 153.028723
+  },
+  {
+    "id": 102,
+    "name": "122 - LOWER RIVER TCE / ELLIS ST",
+    "address": "Lower River Tce / Ellis St",
+    "latitude": -27.482279,
+    "longitude": 123.028723
+  },
+  {
+    "id": 123,
+    "name": "122 - LOWER RIVER TCE / ELLIS ST",
+    "address": "Lower River Tce / Ellis St",
+    "latitude": null,
+    "longitude": 153.028723
+  }
+]
