@@ -8,17 +8,23 @@ def cleaning_data(file_name):
     '''
         Function to import and clean data 
     '''
+    print('Importing data')
     data = import_data(file_name)
+    print('Cleaning data')
     data['longitude']=data.apply(lambda x: str_to_none(x.longitude), axis=1)
     data['latitude']=data.apply(lambda x: str_to_none(x.latitude), axis=1)
     data['latitude'] = data.apply(lambda x: replace_with_coordinates(x, 'latitude'), axis=1)    
     data['longitude'] = data.apply(lambda x: replace_with_coordinates(x, 'longitude'), axis=1)
+    # Report data with None value on longitude or latitude.
+    # They won't be used for the clustering and it would be great to know the unused rows.
+    print(data_with_na(data))
     return data_without_na(data)
 
 def make_clusters(data, nb_clusters):
     '''
         Fonction to make clusters of coordinates
     '''
+    print('Applying Kmeans')
     kmeans = KMeans(n_clusters=nb_clusters, random_state=0).fit(data[['latitude', 'longitude']].values)
     data['clusters'] = kmeans.labels_
     return data
