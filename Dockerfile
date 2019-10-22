@@ -1,4 +1,3 @@
-# We can't use Alpine cause we need Sqlalchemy -> mysql -> gcc, so it's not worth
 FROM python:3.7.0-stretch
 
 COPY requirements.txt /app/
